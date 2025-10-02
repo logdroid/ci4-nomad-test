@@ -15,6 +15,16 @@ class Test extends BaseController
     }
     public function getEcho($echo)
     {
+
+        if($echo == "env")
+        {
+            return $this->response->setJSON([
+                "status"=> "success",
+                "server" => $_SERVER,
+                'env' => $_ENV
+            ]);
+        }
+
         return $this->response->setJSON([
             "Echo" => $echo,
         ]);
