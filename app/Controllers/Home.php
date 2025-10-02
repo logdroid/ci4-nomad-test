@@ -8,10 +8,4 @@ class Home extends BaseController
     {
         return view('welcome_message');
     }
-    public function getTest($echo = 'Test String Empty')
-    {
-        return $this->response->setJSON([
-            'Your test string' => $echo
-        ]);
-    }
 }
